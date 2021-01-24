@@ -44,9 +44,11 @@ Eventually we will have the following folder structure:
 * stop it (Ctrl+C)
 
 ## Implementazione
-Si è utilizzato il framework Spring Boot per creare uno stack web per api REST in modo da mettere a disposizione di eventuali client le funzionalità della calcolatrice
-Il deploy avviene tramite package jar con un server tomcat embedded per facilitare installazione ed eventualmente l'uso in ambiente microservice a container. Le configurazione principali sono esternalizzate in modo da consentire all'utente la personalizzazione di porte e la politica dei log.
-E' stato usato swagger sia per la documentazione delle api rest che per consentire un facile test manuale delle api.
+Si è utilizzato il framework Spring Boot per creare uno stack web per api REST in modo da mettere a disposizione di eventuali client le funzionalità della calcolatrice.  
+Il servizio ha configurato CORS e ha la gestione degli UserDetails disabilitata, per una eventuale gestione custom dei token di autenticazione (es JWT).  
+Il deploy avviene tramite package jar con un server tomcat embedded per facilitare installazione ed eventualmente l'uso in ambiente microservice a container.  
+La configurazione base è inclusa nel jar. Inoltre, tramite file di configurazione esterni é possibile la personalizzazione di porte e della politica dei log.  
+E' stato usato swagger sia per la documentazione delle api rest che per consentire un facile test manuale delle api.  
 
 ## Test
 Sono stati implementati 3 tipi di test:
