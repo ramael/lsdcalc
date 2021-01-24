@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>run</actionName>
+            <packagings>
+                <packaging>jar</packaging>
+            </packagings>
+            <goals>
+                <goal>org.springframework.boot:spring-boot-maven-plugin:2.2.4.RELEASE:run</goal>
+            </goals>
+            <properties>
+                <exec.args>-classpath %classpath ${packageClassName}</exec.args>
+                <exec.executable>java</exec.executable>
+            </properties>
+        </action>
+        <action>
+            <actionName>run.single.main</actionName>
+            <packagings>
+                <packaging>*</packaging>
+            </packagings>
+            <goals>
+                <goal>org.springframework.boot:spring-boot-maven-plugin:2.2.4.RELEASE:run</goal>
+            </goals>
+            <properties>
+                <exec.args>-classpath %classpath ${packageClassName}</exec.args>
+                <exec.executable>java</exec.executable>
+                <exec.classpathScope>${classPathScope}</exec.classpathScope>
+            </properties>
+        </action>
+        <action>
+            <actionName>debug</actionName>
+            <packagings>
+                <packaging>jar</packaging>
+            </packagings>
+            <goals>
+                <goal>org.springframework.boot:spring-boot-maven-plugin:2.2.4.RELEASE:run</goal>
+            </goals>
+            <properties>
+                <exec.args>-agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address} -classpath %classpath ${packageClassName}</exec.args>
+                <exec.executable>java</exec.executable>
+                <jpda.listen>true</jpda.listen>
+            </properties>
+        </action>
+        <action>
+            <actionName>debug.single.main</actionName>
+            <packagings>
+                <packaging>*</packaging>
+            </packagings>
+            <goals>
+                <goal>org.springframework.boot:spring-boot-maven-plugin:2.2.4.RELEASE:run</goal>
+            </goals>
+            <properties>
+                <exec.args>-agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address} -classpath %classpath ${packageClassName}</exec.args>
+                <exec.executable>java</exec.executable>
+                <exec.classpathScope>${classPathScope}</exec.classpathScope>
+                <jpda.listen>true</jpda.listen>
+            </properties>
+        </action>
+        <action>
+            <actionName>profile</actionName>
+            <packagings>
+                <packaging>jar</packaging>
+            </packagings>
+            <goals>
+                <goal>org.springframework.boot:spring-boot-maven-plugin:2.2.4.RELEASE:run</goal>
+            </goals>
+            <properties>
+                <exec.args>-classpath %classpath ${packageClassName}</exec.args>
+                <exec.executable>java</exec.executable>
+            </properties>
+        </action>
+        <action>
+            <actionName>profile.single.main</actionName>
+            <packagings>
+                <packaging>*</packaging>
+            </packagings>
+            <goals>
+                <goal>org.springframework.boot:spring-boot-maven-plugin:2.2.4.RELEASE:run</goal>
+            </goals>
+            <properties>
+                <exec.args>-classpath %classpath ${packageClassName}</exec.args>
+                <exec.executable>java</exec.executable>
+                <exec.classpathScope>${classPathScope}</exec.classpathScope>
+            </properties>
+        </action>
+    </actions>

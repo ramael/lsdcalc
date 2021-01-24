@@ -17,13 +17,13 @@ In base a questo sistema la sterlina (pound, � o p) era divisa in 20 scellini 
 
 ## Installation
 Unpack `lsdcalc-*-bin.zip` in a temporary folder  
-Rename `lsdcalc-*.jar` to `lsdcalc.jar`
+Rename `lsdcalc-*.jar` to `lsdcalc.jar`  
 Create lsdcalc installation folder (ex: C:\lsdcalc). In this document we will call this folder {LSDCALC_HOME}.
 - Inside {LSDCALC_HOME} folder create 'config' folder
 - Copy lsdcalc.jar in {LSDCALC_HOME} folder
 - Copy batch file lsdcalc_start.cmd in {LSDCALC_HOME} folder
 - Copy application.properties in {LSDCALC_HOME}\config
-- Update application.properties with the corrent information (server port, paths, ...)
+- Update application.properties with the corrent information (server port, paths, ...). Default server port is 8085
 - Copy logback.xml in {LSDCALC_HOME}\config
 - Update logback.xml with the correct information (path)
 
@@ -40,6 +40,6 @@ Eventually we will have the following folder structure:
 * run the following command: lsdcalc_start.cmd
 * play with it
     * the server will start on the port defined in application.properties
-    * visit the following address in your browser (http://localhost:<port\>/) to test the service with swagger
+    * visit the following address in your browser (http://localhost:port/lsdcalc/swagger-ui.html) to test the service with swagger
 * stop it (Ctrl+C)
 
