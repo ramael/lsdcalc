@@ -1,9 +1,9 @@
 # lsdcalc
 SpringBoot + Tests + Swagger
 
-## Old British money calculator (�sd)
+## Old British money calculator (£sd)
 Prima del 15 febbraio 1971 la Gran Bretagna aveva un sistema di moneta risalente alle conquiste normanne del 1066.
-In base a questo sistema la sterlina (pound, � o p) era divisa in 20 scellini (shillings, s) o 240 pennies (pence, d), Ogni scellino era diviso in 12 pennies.
+In base a questo sistema la sterlina (pound, £ o p) era divisa in 20 scellini (shillings, s) o 240 pennies (pence, d), Ogni scellino era diviso in 12 pennies.
 
 ### Esempio di operazioni
 * 5p 17s 8d + 3p 4s 10d   = 9p 2s 6d
