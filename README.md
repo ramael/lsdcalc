@@ -43,3 +43,13 @@ Eventually we will have the following folder structure:
     * visit the following address in your browser (http://localhost:port/lsdcalc/swagger-ui.html) to test the service with swagger
 * stop it (Ctrl+C)
 
+## Implementazione
+Si è utilizzato il framework Spring Boot per creare uno stack web per api REST in modo da mettere a disposizione di eventuali client le funzionalità della calcolatrice
+Il deploy avviene tramite package jar con un server tomcat embedded per facilitare installazione ed eventualmente l'uso in ambiente microservice a container. Le configurazione principali sono esternalizzate in modo da consentire all'utente la personalizzazione di porte e la politica dei log.
+E' stato usato swagger sia per la documentazione delle api rest che per consentire un facile test manuale delle api.
+
+## Test
+Sono stati implementati 3 tipi di test:
+* Test servizio di conversione [`@SpringBootTest(webEnvironment = WebEnvironment.NONE)`]: non necessita di ambiente web
+* Test api Rest [`@WebMvcTest(CalcRestController.class)`]: test del solo layer web, senza caricamento dell'application context, con inject di MockMvc e MockBean
+* Test api Rest completo [`@SpringBootTest + @AutoConfigureMockMvc`]: test del layer web con caricamento dell'application context 
